@@ -4,8 +4,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ContactService } from 'src/app/services/contact.service';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import { Contact} from '../models/contact'
-import { CommonModule } from '@angular/common';  
-import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-contact-recycle',
