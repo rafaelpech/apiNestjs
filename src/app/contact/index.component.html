@@ -1,0 +1,35 @@
+
+<div class="container" *ngIf="!listaVacia">
+    <table class="table table-dark text-center">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">telefono</th>
+            <th scope="col">correo</th>
+            <th scope="col">edad</th>
+            <th scope="col">Ver</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contact of list">
+            <td>{{contact.id}}</td>
+            <td>{{contact.nombre}}</td>
+            <td>{{contact.apellido}}</td>
+            <td>{{contact.telefono}}</td>
+            <td>{{contact.correo}}</td>
+            <td>{{contact.edad}}</td>
+            <td><button class="btn btn-outline-primary" routerLink="/detalle/{{contact.id}}"><i class="far fa-eye"></i> Ver</button></td>
+            <td><button class="btn btn-outline-warning" routerLink="/editar/{{contact.id}}"><i class="far fa-edit"></i> Editar</button></td>
+            <td><button class="btn btn-outline-danger" (click)="borrar(contact)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<div class="container" *ngIf="listaVacia">
+    <div class="p-3 mb-2 bg-dark text-white text-center"><h2>{{listaVacia}}</h2></div>
+</div>

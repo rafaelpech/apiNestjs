@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row mt-5" *ngIf="contact">
+        <div class="col-md-4 mx-auto">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">
+                    Detalle
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>ID: </b>{{contact.id}}</li>
+                    <li class="list-group-item"><b>Nombre: </b>{{contact.nombre}}</li>
+                    <li class="list-group-item"><b>Apellido: </b>{{contact.apellido}}</li>
+                    <li class="list-group-item"><b>Teléfono: </b>{{contact.telefono}}</li>
+                    <li class="list-group-item"><b>Correo: </b>{{contact.correo}}</li>
+                    <li class="list-group-item"><b>Edad: </b>{{contact.edad}}</li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-outline-primary btn-block" (click)="volver()"><i
+                            class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
